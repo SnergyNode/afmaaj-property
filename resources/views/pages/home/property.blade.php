@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="sec-heading center">
-                    <h2>Hot Properties For Sale</h2>
+                    <h2>Amazing Properties For Sale</h2>
                     <p>Find new & featured property for you.</p>
                 </div>
             </div>

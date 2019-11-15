@@ -18,7 +18,7 @@
                         <h4>Lagos</h4>
                         <span>24 Properties</span>
                     </div>
-                    <div class="img-wrap-background" style="background-image: url(img/tour-1.jpg);"></div>
+                    <div class="img-wrap-background" style="background-image: url(img/places/tour-1.jpg);"></div>
                 </a>
             </div>
 
@@ -28,7 +28,7 @@
                         <h4>Abuja</h4>
                         <span>24 Properties</span>
                     </div>
-                    <div class="img-wrap-background" style="background-image: url(img/tour-2.jpg);"></div>
+                    <div class="img-wrap-background" style="background-image: url(img/places/tour-2.jpg);"></div>
                 </a>
             </div>
 
@@ -42,7 +42,7 @@
                         <h4>Port Harcourt</h4>
                         <span>24 Properties</span>
                     </div>
-                    <div class="img-wrap-background" style="background-image: url(img/tour-3.jpg);"></div>
+                    <div class="img-wrap-background" style="background-image: url(img/places/tour-3.jpg);"></div>
                 </a>
             </div>
 
@@ -52,7 +52,7 @@
                         <h4>Kaduna</h4>
                         <span>24 Properties</span>
                     </div>
-                    <div class="img-wrap-background" style="background-image: url(img/tour-4.jpg);"></div>
+                    <div class="img-wrap-background" style="background-image: url(img/places/tour-4.jpg);"></div>
                 </a>
             </div>
 
@@ -62,7 +62,7 @@
                         <h4>Jos</h4>
                         <span>24 Properties</span>
                     </div>
-                    <div class="img-wrap-background" style="background-image: url(img/tour-5.jpg);"></div>
+                    <div class="img-wrap-background" style="background-image: url(img/places/tour-5.jpg);"></div>
                 </a>
             </div>
 

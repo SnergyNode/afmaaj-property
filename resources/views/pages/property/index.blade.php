@@ -6,8 +6,8 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <h4>Total Property Find is: <span class="theme-cl">207</span></h4>
+                <div class="col-md-12 col-sm-12 mb-5">
+                    <h4>Amazing Properties</h4>
                 </div>
             </div>
 
