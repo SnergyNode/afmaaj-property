@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Afmaaj - Real Estate Managers</title>
+    <title>Afmaaj Properties | Real Estate </title>
 
     <link href="{{ url('img/favicon.png') }}" rel="icon">
     <link href="{{ url('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
