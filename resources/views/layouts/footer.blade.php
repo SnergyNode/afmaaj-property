@@ -34,13 +34,13 @@
                         <h4 class="widget-title">Get in Touch</h4>
                         <div class="fw-address-wrap">
                             <div class="fw fw-location">
-                                7744 North Park, New York
+                                FCT Abuja
                             </div>
                             <div class="fw fw-mail">
                                 estate@afmaaj.co
                             </div>
                             <div class="fw fw-call">
-                                070 9125 5845
+                                09000010001
                             </div>
                             <div class="fw fw-web">
                                 <a href="http://afmaaj.co">Afmaaj</a>

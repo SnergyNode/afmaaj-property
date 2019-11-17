@@ -12,11 +12,11 @@
 
         <div class="row">
 
-            <div class="col-lg-8 col-md-8">
+            <div class="col-lg-4 col-md-4">
                 <a href="#" class="img-wrap">
                     <div class="img-wrap-content visible">
                         <h4>Lagos</h4>
-                        <span>24 Properties</span>
+                        <span>Solar City</span>
                     </div>
                     <div class="img-wrap-background" style="background-image: url(img/places/tour-1.jpg);"></div>
                 </a>
@@ -26,11 +26,23 @@
                 <a href="#" class="img-wrap">
                     <div class="img-wrap-content visible">
                         <h4>Abuja</h4>
-                        <span>24 Properties</span>
+                        <span>Solar City</span>
                     </div>
                     <div class="img-wrap-background" style="background-image: url(img/places/tour-2.jpg);"></div>
                 </a>
             </div>
+
+            <div class="col-lg-4 col-md-4">
+                <a href="#" class="img-wrap">
+                    <div class="img-wrap-content visible">
+                        <h4>Port Harcourt</h4>
+                        <span>Solar City</span>
+                    </div>
+                    <div class="img-wrap-background" style="background-image: url(img/places/tour-3.jpg);"></div>
+                </a>
+            </div>
+
+
 
         </div>
 
@@ -39,18 +51,20 @@
             <div class="col-lg-4 col-md-4">
                 <a href="#" class="img-wrap">
                     <div class="img-wrap-content visible">
-                        <h4>Port Harcourt</h4>
-                        <span>24 Properties</span>
+                        <h4>Kano</h4>
+                        <span>Solar City</span>
                     </div>
-                    <div class="img-wrap-background" style="background-image: url(img/places/tour-3.jpg);"></div>
+                    <div class="img-wrap-background" style="background-image: url(img/places/kano.jpg);"></div>
                 </a>
             </div>
+
+
 
             <div class="col-lg-4 col-md-4">
                 <a href="#" class="img-wrap">
                     <div class="img-wrap-content visible">
                         <h4>Kaduna</h4>
-                        <span>24 Properties</span>
+                        <span>Solar City</span>
                     </div>
                     <div class="img-wrap-background" style="background-image: url(img/places/tour-4.jpg);"></div>
                 </a>
@@ -60,7 +74,7 @@
                 <a href="#" class="img-wrap">
                     <div class="img-wrap-content visible">
                         <h4>Jos</h4>
-                        <span>24 Properties</span>
+                        <span>Solar City</span>
                     </div>
                     <div class="img-wrap-background" style="background-image: url(img/places/tour-5.jpg);"></div>
                 </a>

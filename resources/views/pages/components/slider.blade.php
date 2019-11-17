@@ -17,8 +17,8 @@
                                 -->
 
                                 <div class="home-slider-title">
-                                    <h3><a href="#">Afmaaj Estate</a></h3>
-                                    <span><i class="lni-map-marker"></i> 778 Country St. F C T Abuja, Nigeria</span>
+                                    <h3><a href="#">Afmaaj Solar City</a></h3>
+                                    <span><i class="lni-map-marker"></i> F C T Abuja</span>
                                 </div>
 
                                 <a href="#" class="btn btn-theme-2">View Details <i class="fa fa-angle-right"></i></a>

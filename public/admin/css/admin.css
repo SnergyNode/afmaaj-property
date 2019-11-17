@@ -1,0 +1,84 @@
+.party-sidebar{
+    background: #130a36 !important;
+}
+.btn-primary:focus, .btn-primary:active {
+    background-color: #2d1789 !important;
+}
+
+.btn-primary:hover{
+    background-color: #2d1789;
+    border-color:#130a36
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #130a36;
+    border-color: #130a36;
+}
+.text-primary{
+    color: #130a36 !important;
+}
+.img-fit{
+    width: 100%;
+}
+
+.sidebar-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.hr-fix{
+    border: 0;
+    border-top: 1px solid rgba(248, 248, 248, 0.1);
+    margin: 1rem;
+}
+.mx-w-200{
+    max-width: 200px;
+    max-height: 200px;
+}
+.squared{
+    position: relative;
+    width: 100%;
+}
+.squared:before{
+    content: "";
+    display: block;
+    padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.img-wrapper{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(65, 63, 64);
+}
+
+.img-wrapper img{
+    width: 100%;
+    overflow: hidden;
+}
+.p-relative{position: relative}
+/*JQUERY MODAL POPUP FIX*/
+
+.modal-spinner{
+    min-height: 45px !important;
+}
+.blocker {
+     z-index: 10 !important;
+ }
+.modal{
+    margin-top: 30px;
+    overflow: visible;
+    height: auto !important;
+}
+/*JQUERY MODAL POPUP FIX END*/
+.current .modal{
+    max-width: none !important;
+    width: 70% !important;
+}

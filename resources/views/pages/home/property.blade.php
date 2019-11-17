@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="sec-heading center">
-                    <h2>Amazing Properties For Sale</h2>
+                    <h2>Amazing Properties Book</h2>
                     <p>Find new & featured property for you.</p>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                                 <h4 class="list-pr">N 25 M</h4>
                             </div>
                         -->
-                        <span class="property-type">For Sale</span>
+                        <span class="property-type">Book</span>
                     </div>
 
                     <div class="listing-detail-wrapper pb-0">
@@ -72,7 +72,7 @@
                                 <h4 class="list-pr">N 25 M</h4>
                             </div>
                         -->
-                        <span class="property-type">For Sale</span>
+                        <span class="property-type">Book</span>
                     </div>
 
                     <div class="listing-detail-wrapper pb-0">
@@ -116,7 +116,7 @@
                                 <h4 class="list-pr">N 25 M</h4>
                             </div>
                         -->
-                        <span class="property-type">For Sale</span>
+                        <span class="property-type">Book</span>
                     </div>
 
                     <div class="listing-detail-wrapper pb-0">
@@ -160,7 +160,7 @@
                                 <h4 class="list-pr">N 25 M</h4>
                             </div>
                         -->
-                        <span class="property-type">For Sale</span>
+                        <span class="property-type">Book</span>
                     </div>
 
                     <div class="listing-detail-wrapper pb-0">
@@ -204,7 +204,7 @@
                                 <h4 class="list-pr">N 25 M</h4>
                             </div>
                         -->
-                        <span class="property-type">For Sale</span>
+                        <span class="property-type">Book</span>
                     </div>
 
                     <div class="listing-detail-wrapper pb-0">
@@ -248,7 +248,7 @@
                                 <h4 class="list-pr">N 25 M</h4>
                             </div>
                         -->
-                        <span class="property-type">For Sale</span>
+                        <span class="property-type">Book</span>
                     </div>
 
                     <div class="listing-detail-wrapper pb-0">
@@ -292,7 +292,7 @@
                                 <h4 class="list-pr">N 25 M</h4>
                             </div>
                         -->
-                        <span class="property-type">For Sale</span>
+                        <span class="property-type">Book</span>
                     </div>
 
                     <div class="listing-detail-wrapper pb-0">
@@ -336,7 +336,7 @@
                                 <h4 class="list-pr">N 25 M</h4>
                             </div>
                         -->
-                        <span class="property-type">For Sale</span>
+                        <span class="property-type">Book</span>
                     </div>
 
                     <div class="listing-detail-wrapper pb-0">
@@ -380,7 +380,7 @@
                                 <h4 class="list-pr">N 25 M</h4>
                             </div>
                         -->
-                        <span class="property-type">For Sale</span>
+                        <span class="property-type">Book</span>
                     </div>
 
                     <div class="listing-detail-wrapper pb-0">
@@ -454,7 +454,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="text-center mt-4">
-                    <a href="#" class="btn btn-theme-2">Browse More Property</a>
+                    <a href="{{ route('property') }}" class="btn btn-theme-2">Browse More Property</a>
                 </div>
             </div>
         </div>

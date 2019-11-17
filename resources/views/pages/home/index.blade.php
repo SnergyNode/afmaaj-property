@@ -11,6 +11,6 @@
 
     @include('pages.home.topPlace')
 
-    @include('pages.home.blog')
+    {{--@include('pages.home.blog')--}}
 
 @endsection

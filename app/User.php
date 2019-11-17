@@ -16,7 +16,24 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'who',
+        'unid',
+        'first_name',
+        'last_name',
+        'email',
+        'email_valid',
+        'phone_valid',
+        'phone',
+        'passport',
+        'username',
+        'address',
+        'office',
+        'active',
+        'password',
+        'role_id',
+        'seen_last',
+        'countdown_pass',
+        'reset_toke',
     ];
 
     /**
@@ -36,4 +53,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function makeToken($val){
+        $token = "";
+        $codes = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        $codes .= "abcdefghijklmnopqrstuvwxyz";
+        $codes .= "0123456789";
+        $max = strlen($codes);
+        for($i=0; $i < $val; $i++){
+            $token.= $codes[random_int(0, $max-1)];
+        }
+        return $token;
+    }
+
+    public function names(){
+        return $this->first_name . ' ' . $this->last_name;
+    }
+
+    public function image(){
+        return is_file($this->passport)?url($this->passport):url('img/user.png');
+    }
 }
