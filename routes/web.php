@@ -25,6 +25,10 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'admin'], function(){
 
     Route::resource('user', 'UserController');
     Route::resource('slide', 'SliderController');
+    Route::resource('property', 'PropertyController');
+    Route::get('property/pic/pop/{unid}', 'PropertyController@popPic')->name('property.image.pop');
+
+    Route::resource('location', 'LocationController');
 
     Route::post('app/logout','AuthController@logout')->name('app.logout');
 });

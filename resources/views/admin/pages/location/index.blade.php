@@ -1,8 +1,8 @@
 <?php
-$active['services'] = 'active';
-$bladenme = 'Services';
+$active['location'] = 'active';
+$bladenme = 'Locations';
 ?>
-@extends('cms.layout.app')
+@extends('admin.layout.app')
 @section('content')
 
     <!-- Begin Page Content -->
@@ -22,8 +22,8 @@ $bladenme = 'Services';
                 <div class="card shadow mb-4">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Slides </h6>
-                        <a href="{{ route('service.create') }}" class="btn btn-primary btn-xs float-right">New</a>
+                        <h6 class="m-0 font-weight-bold text-primary">Locations </h6>
+                        <a href="{{ route('location.create') }}" class="btn btn-primary btn-xs float-right">New</a>
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
@@ -32,29 +32,29 @@ $bladenme = 'Services';
                             <thead>
 
 
-                            <th>Title</th>
-                            <th>Image</th>
-                            <th>Info</th>
-                            <th>Btn Label</th>
+                            <th>Name</th>
+                            <th>Pic</th>
+                            <th>Properties</th>
+                            <th>Active</th>
                             <th>action</th>
                             </thead>
                             <tbody>
-                            @forelse($services as $service)
+                            @forelse($locations as $location)
                                 <tr>
-                                    <td>{{ $service->title }}</td>
-                                    <td><img src="{{ $service->image() }}" alt="" class="mx-w-200"></td>
-                                    <td>{{ $service->info }}</td>
-                                    <td>{{ $service->btn_text }}</td>
+                                    <td>{{ $location->name }}</td>
+                                    <td><img src="{{ asset($location->picture()) }}" alt="" class="mx-w-100"></td>
+                                    <td>{{ $location->property->count() }}</td>
+                                    <td>{{ $location->active?'Active':'Inactive' }}</td>
                                     <td>
-                                        <a class="btn btn-danger btn-xs" href="#"><span class="fa fa-edit"></span></a>
-                                        <a class="btn btn-danger btn-xs" href="#"><span class="fa fa-trash"></span></a>
+                                        <a class="btn btn-outline-info btn-xs" href="{{ route('location.show', $location->unid) }}"><span class="fa fa-edit"></span></a>
+                                        <a class="btn btn-outline-danger btn-xs" href="#"><span class="fa fa-trash"></span></a>
                                     </td>
                                 </tr>
                             @empty
                                 <tr>
                                     <td class="" colspan="5">
                                         <p class="text-center">No Slider Found. <a
-                                                    href="{{ route('slide.create') }}"><b>Add</b></a> Now</p>
+                                                    href="{{ route('location.create') }}"><b>Add</b></a> Now</p>
                                     </td>
                                 </tr>
                             @endforelse

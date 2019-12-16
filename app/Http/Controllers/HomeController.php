@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Property;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,10 +30,15 @@ class HomeController extends Controller
             ['jpg'=>'img/banner/slider3.jpg'],
             ['jpg'=>'img/banner/slider4.jpg'],
         );
-        return view('pages.home.index')->with('banners',$banners);
+
+        $props = Property::where('active', true)->take(6)->get();
+        return view('pages.home.index')->with('banners',$banners)
+            ->with('props', $props);
     }
 
     public function property(){
-        return view('pages.property.index');
+        $props = Property::where('active', true)->paginate(21);
+        return view('pages.property.index')
+            ->with('props', $props);
     }
 }

@@ -18,9 +18,10 @@ class CreatePropertiesTable extends Migration
             $table->text('unid')->nullable();
             $table->text('name')->nullable();
             $table->double('price')->nullable();
-            $table->text('location')->nullable();
+            $table->string('location')->nullable();
             $table->integer('bedroom')->nullable();
-            $table->integer('bathroom')->nullable();
+            $table->integer('toilet')->nullable();
+            $table->string('type')->nullable(); // estate, etc
             $table->text('info')->nullable();
             $table->boolean('active')->nullable();
             $table->timestamps();

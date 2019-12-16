@@ -17,7 +17,7 @@ $bladenme = 'New Users';
         <div class="row">
             <!-- Area Chart -->
             <div class="col-xl-12 col-lg-12">
-                @include('cms.layout.notify')
+                @include('admin.layout.notify')
                 <div class="card shadow mb-4">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">

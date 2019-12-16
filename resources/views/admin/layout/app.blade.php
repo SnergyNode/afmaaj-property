@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Party Uniform Admin</title>
+    <title>Admin | Afmaaj Properties Real Estate </title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -100,10 +100,17 @@
 <script src="{{ asset('admin/vendor/chart.js/Chart.min.js') }}"></script>
 
 <!-- Page level custom scripts -->
-<script src="{{ asset('admin/js/demo/chart-area-demo.js') }}"></script>
-<script src="{{ asset('admin/js/demo/chart-pie-demo.js') }}"></script>
+{{--<script src="{{ asset('admin/js/demo/chart-area-demo.js') }}"></script>--}}
+{{--<script src="{{ asset('admin/js/demo/chart-pie-demo.js') }}"></script>--}}
 <script src="{{ asset('admin/js/admin.js') }}"></script>
     <script src="{{ asset('js/jquery.modal.min.js') }}" defer></script>
+
+@if(!empty(@$scriptz))
+    @foreach($scriptz as $script)
+        <script src="{{ asset('js/'.$script) }}" defer></script>
+
+    @endforeach
+@endif
 
 </body>
 

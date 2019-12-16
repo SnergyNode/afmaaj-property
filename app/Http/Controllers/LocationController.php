@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Location;
 use Illuminate\Http\Request;
 
-class LocationController extends Controller
+class LocationController extends MyController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class LocationController extends Controller
      */
     public function index()
     {
-        //
+        $locations = Location::where('active', true)->orderBy('id', 'DESC')->get();
+        return view('admin.pages.location.index')->with('locations', $locations);
     }
 
     /**
@@ -24,7 +25,7 @@ class LocationController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.location.add');
     }
 
     /**
@@ -35,7 +36,30 @@ class LocationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $exist = Location::where('name', $request->input('name'))->first();
+        if(!empty($exist)){
+            return back()->withErrors(array('errors'=>'Location already exist'))->withInput($request->input());
+        }
+        $location = new Location();
+        $image = '';
+        if ($request->hasFile('image')) {
+
+            $photo = $request->file('image');
+            $resp = $this->fileUploader($photo);
+            if($resp[1]){
+                $image = $resp[0];
+            }else{
+                return back()->withErrors(array('errors'=>$resp[0]))->withInput($request->input());
+            }
+
+        }
+        $location->name = $request->input('name');
+        $location->unid = $this->unidid(50);
+        $location->pic = $image;
+        $location->active = true;
+        $location->save();
+        return redirect()->route('location.index')->withMessage('New Location Added');
     }
 
     /**
@@ -44,9 +68,14 @@ class LocationController extends Controller
      * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function show(Location $location)
+    public function show($unid)
     {
-        //
+        $location = Location::whereUnid($unid)->first();
+        if(!empty($location)){
+            return view('admin.pages.location.show')->with('location', $location);
+        }
+
+        return back()->withErrors($this->error_man('item not found'));
     }
 
     /**
@@ -67,9 +96,40 @@ class LocationController extends Controller
      * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Location $location)
+    public function update(Request $request, $unid)
     {
-        //
+        $location = Location::whereUnid($unid)->first();
+        if(!empty($location)){
+            $location->name = $request->input('name');
+
+            $process = false;
+            $message = 'Updated';
+
+
+            if ($request->hasFile('image')) {
+
+
+                $photo = $request->file('image');
+                $resp = $this->fileUploader($photo);
+
+                $image = $resp[0];
+                $process = $resp[1];
+
+                if($process){
+                    $message = $resp[0];
+                    $location->pic = $image;
+                }else{
+                    $message = $resp[0];
+                    return back()->withMessage($message);
+                }
+
+            }
+
+            $location->update();
+
+            return back()->withMessage($message);
+        }
+        return redirect()->route('location.index')->withErrors($this->error_man('item not found'));
     }
 
     /**

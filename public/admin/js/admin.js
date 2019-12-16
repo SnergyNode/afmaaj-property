@@ -1,4 +1,4 @@
-function shwimg(){
+function shwimg(item){
     // get the image to show selected image
     var i = document.getElementById('imgInp');
 

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Location;
+use App\Models\Property;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -48,6 +51,12 @@ class AuthController extends Controller
     }
 
     public function dashboard(){
-        return view('admin.pages.dashboard.index');
+        $properties = Property::where('active', true)->select(['id'])->get();
+        $admin = User::where('active', true)->select(['id'])->get();
+        $location = Location::where('active', true)->select(['id'])->get();
+        return view('admin.pages.dashboard.index')
+            ->with('properties', $properties)
+            ->with('admin', $admin)
+            ->with('location', $location);
     }
 }

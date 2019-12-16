@@ -1,9 +1,11 @@
 <?php
-$active['gallery'] = 'active';
-$bladenme = 'Image Gallery | New ';
+$active['location'] = 'active';
+$route = route('location.index');
+$bladenme = "<a href='$route'>Locations</a> | new";
 ?>
-@extends('cms.layout.app')
+@extends('admin.layout.app')
 @section('content')
+
 
     <!-- Begin Page Content -->
     <div class="container-fluid">
@@ -21,7 +23,7 @@ $bladenme = 'Image Gallery | New ';
                 <div class="card shadow mb-4">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">New Image</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">{{ $location->name }}</h6>
 
                     </div>
                     <!-- Card Body -->
@@ -30,24 +32,28 @@ $bladenme = 'Image Gallery | New ';
                         <div class="row">
 
                             <div class="col-md-8 offset-2">
-                                <form role="form" method="POST" action="{{ route('image.store') }}" enctype="multipart/form-data">
+                                <form role="form" method="POST" action="{{ route('location.update', $location->unid) }}" enctype="multipart/form-data">
                                     @csrf
+                                    {{ method_field('put') }}
                                     <fieldset>
-                                        <legend>Slide Details</legend>
+                                        <legend>Location Details</legend>
 
                                         <div class="row">
-
                                             <div class="form-group col-md-6">
-                                                <label for=""> * Image <small>Max size, 1mb</small></label>
-                                                <input class="" name="image"  required type="file" accept="image/*" onchange="shwimg()" id="imgInp">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <br>
-                                                <div class="" style="max-width: 200px; padding: 0; border-radius: 5px; margin: 0 auto">
-                                                    <img id="imgtoshow"  src="{{ url('images/default.png') }}" class="img-fit mid-size" alt="">
-                                                </div>
+                                                <label for="first_name">* Name</label>
+                                                <input type="text" class="form-control" name="name" value="{{ $location->name }}" id="" placeholder="Location" required autocomplete="off">
                                             </div>
 
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for=""> * Image <small>: Max size = 600kb</small></label>
+                                            <input class="" name="image"  required type="file" accept="image/*" onchange="shwimg()" id="imgInp" >
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <br>
+                                            <div class="" style="max-width: 200px; padding: 0; border-radius: 5px; margin: 0 auto">
+                                                <img id="imgtoshow"  src="{{ url($location->picture()) }}" class="img-fit mid-size" alt="">
+                                            </div>
                                         </div>
                                     </fieldset>
 
@@ -57,7 +63,7 @@ $bladenme = 'Image Gallery | New ';
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <button type="submit" class="btn btn-primary">
-                                                    Add Image
+                                                    Update Location
                                                 </button>
                                             </div>
                                         </div>

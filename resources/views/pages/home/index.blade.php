@@ -7,7 +7,8 @@
 
     @include('pages.home.findByLocation')
 
-    @include('pages.home.property')
+{{--    @include('pages.home.property')--}}
+    @include('pages.home.property_live')
 
     @include('pages.home.topPlace')
 
