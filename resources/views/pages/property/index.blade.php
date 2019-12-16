@@ -22,7 +22,7 @@
             </div>
 
             {{--@include('pages.property.property')--}}
-            @include('pages.property.property')
+            @include('pages.property.property_live')
 
             <!-- Pagination -->
             <!--
