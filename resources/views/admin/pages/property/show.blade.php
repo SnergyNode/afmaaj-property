@@ -81,7 +81,7 @@ $scriptz = ['main_admin.js'];
                                         <div class="row">
                                             <div class="form-group col-md-12">
                                                 <label for="first_name"> Information </label>
-                                                <textarea type="text" class="form-control" name="info" id="" placeholder="Details of Property"  autocomplete="off">{{ $property->price }}</textarea>
+                                                <textarea type="text" class="form-control" name="info" id="" placeholder="Details of Property"  autocomplete="off">{{ $property->info }}</textarea>
                                             </div>
                                         </div>
 
