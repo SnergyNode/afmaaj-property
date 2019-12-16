@@ -23,7 +23,7 @@ $bladenme = 'Properties';
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <h6 class="m-0 font-weight-bold text-primary">Properties </h6>
-                        <a href="{{ route('location.create') }}" class="btn btn-primary btn-xs float-right">New</a>
+                        <a href="{{ route('property.create') }}" class="btn btn-primary btn-xs float-right">New</a>
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
