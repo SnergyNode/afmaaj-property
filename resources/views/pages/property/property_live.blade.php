@@ -32,7 +32,7 @@
                     </div>
                     <div class="property_links">
                         <a href="#" class="btn btn-theme">Request Info</a>
-                        <a href="#" class="btn btn-theme-light">Property Detail</a>
+                        <a href="{{ route('property.info', $prop->unid) }}" class="btn btn-theme-light">Property Detail</a>
                     </div>
                 </div>
             </div>

@@ -174,4 +174,16 @@ class PropertyController extends MyController
         }
         return back()->withMessage($message);
     }
+
+    public function showinfo($unid){
+        $prop = Property::whereUnid($unid)->first();
+        $properties = Property::where('unid', '!=', $prop->unid)->where('active', true)->orderBy('id', 'DESC')->take(6)->get();
+        if(!empty($prop)){
+            return view('pages.property.info')
+                ->with('properties', $properties)
+                ->with('prop', $prop);
+        }
+
+        return back();
+    }
 }

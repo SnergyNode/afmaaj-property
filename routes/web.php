@@ -18,6 +18,7 @@ Route::get('/admin-signin', 'AuthController@login')->name('auth.login');
 Route::post('/admin-signin', 'AuthController@signin')->name('try.login');
 
 Route::get('property', 'HomeController@property')->name('property');
+Route::get('property/info/{unid}', 'PropertyController@showinfo')->name('property.info');
 
 Route::group(['prefix' => 'admin', 'middleware'=> 'admin'], function(){
     Route::get('/dashboard', 'AuthController@dashboard')->name('admin.dashboard');
@@ -27,6 +28,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'admin'], function(){
     Route::resource('slide', 'SliderController');
     Route::resource('property', 'PropertyController');
     Route::get('property/pic/pop/{unid}', 'PropertyController@popPic')->name('property.image.pop');
+
 
     Route::resource('location', 'LocationController');
 
