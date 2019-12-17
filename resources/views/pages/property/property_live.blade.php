@@ -8,7 +8,7 @@
                     <div class="list-img-slide">
                         <div class="click">
                             @foreach($prop->pics as $pic)
-                                <div><a href="#"><img src="{{ url($pic->url) }}" class="img-fluid mx-auto" alt="" /></a></div>
+                                <div><a href="{{ route('property.info', $prop->unid) }}"><img src="{{ url($pic->url) }}" class="img-fluid mx-auto" alt="" /></a></div>
                             @endforeach
                         </div>
                     </div>
