@@ -4,7 +4,7 @@
 
         <div class="row">
             <div class="col-md-12 col-sm-12 mb-5">
-                <h2 class="text-center">{{ $prop->type .' | '.$prop->name }}</h2>
+                <h2 class="text-center">{{ $prop->type .' Information' }}</h2>
             </div>
         </div>
 
@@ -15,8 +15,9 @@
 
                 <div class="slide-property-first mb-4">
                     <div class="pr-price-into">
-                        <h2>$1700 <i>/ monthly</i> <span class="prt-type rent">For Rental</span></h2>
-                        <span><i class="lni-map-marker"></i> 778 Country St. Panama City, FL</span>
+                        {{--<h2>$1700 <i>/ monthly</i> <span class="prt-type rent">For Rental</span></h2>--}}
+                        <h2>{{ $prop->name }}</h2>
+                        <span><i class="lni-map-marker"></i>{{ $prop->located->name }}</span>
                     </div>
                 </div>
 
